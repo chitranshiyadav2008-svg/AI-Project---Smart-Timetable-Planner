@@ -4,7 +4,7 @@ import math
 
 from rules import cost
 from initial_solution import generate_initial_solution
-from neighbor import generate_neighbor
+from neighbour import generate_neighbor
 
 
 def solve(classes, rooms, batches, iters, seed):
