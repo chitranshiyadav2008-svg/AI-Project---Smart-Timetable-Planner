@@ -7,7 +7,7 @@ from simulated_annealing import solve
 classes = make_classes(COURSES)
 
 # Run the simulated annealing algorithm
-best_timetable = solve(
+best_timetable, history = solve(
     classes,
     ROOMS,
     BATCHES,

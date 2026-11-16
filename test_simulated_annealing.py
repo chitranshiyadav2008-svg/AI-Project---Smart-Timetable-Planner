@@ -8,7 +8,7 @@ def test_solve_returns_valid_structure():
 
     classes = make_classes(COURSES)
 
-    timetable = solve(
+    timetable, history = solve(
         classes,
         ROOMS,
         BATCHES,
@@ -29,11 +29,11 @@ def test_same_seed_same_result():
 
     classes = make_classes(COURSES)
 
-    result1 = solve(
+    result1, _ = solve(
         classes, ROOMS, BATCHES, 100, 42
     )
 
-    result2 = solve(
+    result2, _ = solve(
         classes, ROOMS, BATCHES, 100, 42
     )
 
@@ -44,7 +44,7 @@ def test_cost_is_nonnegative():
 
     classes = make_classes(COURSES)
 
-    timetable = solve(
+    timetable, history = solve(
         classes, ROOMS, BATCHES, 100, 42
     )
 
